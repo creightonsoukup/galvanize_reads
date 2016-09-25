@@ -3,6 +3,11 @@ var router = express.Router();
 var knex = require('../knex')
 
 /* GET users listing. */
+router.get('/:id', function (req,res,next) {
+  knex('book').select().where('id', req.params.id).then(function(book) {
+    res.render('get_book', {book:book[0]});
+  })
+})
 router.get('/', function(req, res, next) {
   knex('book').select().then(function(books) {
     res.render("list_books", {books:books})

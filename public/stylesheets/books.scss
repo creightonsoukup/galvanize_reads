@@ -24,6 +24,15 @@
       margin-left: 1rem;
       transform: transform 0.3s;
       h3 {
+        @include subheader-text;
+        a {
+          color: $darkest-color;
+          &:visited {
+            color: $lighter-color;
+          }
+        }
+      }
+      .genre {
         @include body-text;
         font-style: italic;
       }
