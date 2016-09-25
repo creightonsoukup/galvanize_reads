@@ -1,0 +1,16 @@
+<form class="" action="/books/{{book.id}}?_method=PUT" method="POST">
+  <h2>Edit a Book</h2>
+  <label for="book-title">Title</label>
+  <input type="text" maxlength="255" name="title" id="book-title" required="required" value="{{book.title}}">
+
+  <label for="book-genre">Genre</label>
+  <input type="text" maxlength="255" name="genre" id="book-genre" required="required" value="{{book.genre}}">
+
+  <label for="book-cover-image-url">Cover Image URL</label>
+  <input type="url" name="cover_image_url" id="book-cover-image-url" value="{{book.cover_url}}">
+
+  <label for="book-description">Description</label>
+  <textarea name="description" maxlength="10000" required="required" id="book-description">{{book.description}}</textarea>
+
+  <input type="submit" value="Edit Book">
+</form>

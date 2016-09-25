@@ -124,15 +124,20 @@ body > header {
         font-weight: 400;
         font-color: #333;
         font-size: 1rem; }
-      .books .book .details .delete {
+      .books .book .details .actions {
         position: absolute;
         top: 0;
         right: 0;
-        color: #b34d4d;
         font-size: 2rem;
-        cursor: pointer; }
-        .books .book .details .delete:hover {
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.3s; }
+        .books .book .details .actions .delete:hover, .books .book .details .actions .edit:hover {
           transform: scale(1.2); }
+        .books .book .details .actions .delete {
+          color: #b34d4d; }
+        .books .book .details .actions .edit {
+          color: #4F618E; }
 
 .add {
   display: inline-block;
