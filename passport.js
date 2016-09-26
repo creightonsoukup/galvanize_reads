@@ -7,5 +7,17 @@ passport.use(new googleOAuth({
   callbackURL: process.env.G_CALLBACK
 },
   function (accessToken, refreshToken, profile, done) {
+    console.log(arguments)
+    throw new Error("NOT INITIALIZED")
   }
 ))
+
+passport.serialize(function (user) {
+  console.log("SERIALIZE")
+  throw new Error("NOT INITIALIZED")
+})
+
+passport.deserialize(function (id) {
+  console.log("DESERIALIZE")
+  throw new Error("NOT INITIALIZED")
+})
