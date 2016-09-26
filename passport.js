@@ -1,5 +1,5 @@
 var passport = require('passport')
-var googleOAuth = require('passport-google-oauth').Strategy
+var googleOAuth = require('passport-google-oauth20').Strategy
 
 passport.use(new googleOAuth({
   clientID: process.env.G_CLIENTID

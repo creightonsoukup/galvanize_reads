@@ -12,6 +12,7 @@ var session = require('express-session')
 
 var routes = require('./routes/index');
 var books = require('./routes/books');
+var logins = require('./routes/login')
 
 var app = express();
 
@@ -50,6 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/books', books);
+app.use('/login', logins);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
